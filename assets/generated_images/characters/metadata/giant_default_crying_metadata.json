@@ -1,0 +1,31 @@
+{
+  "assetKey": "giant_crying_default",
+  "asset": {
+    "type": "character",
+    "character_name": "giant",
+    "emotion": "crying",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Harold, the giant, crying. Huge, cartoonish tears stream down his face as he sobs. His expression is one of deep hurt. The scene is illuminated by soft, melancholy light, creating a strangely sad atmosphere despite his size. The overall style emphasizes the glistening tears and his quivering lip."
+  },
+  "filename": "giant_default_crying.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\giant_default_crying.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Harold, the giant, crying. Huge, cartoonish tears stream down his face as he sobs. His expression is one of deep hurt. The scene is illuminated by soft, melancholy light, creating a strangely sad atmosphere despite his size. The overall style emphasizes the glistening tears and his quivering lip. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "contextImages": [
+    {
+      "filename": "giant_default_sad.png",
+      "type": "character",
+      "description": "giant"
+    },
+    {
+      "filename": "giant_default_angry.png",
+      "type": "character",
+      "description": "giant"
+    },
+    {
+      "filename": "giant_default_crying.png",
+      "type": "character",
+      "description": "giant"
+    }
+  ],
+  "generated_at": "2025-09-16T03:30:10.215Z"
+}

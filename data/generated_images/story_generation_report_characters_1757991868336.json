@@ -1,0 +1,142 @@
+{
+  "total": 27,
+  "successful": 23,
+  "failed": 4,
+  "assets_processed": "characters",
+  "generated_at": "2025-09-16T03:04:28.335Z",
+  "successful_assets": [
+    {
+      "assetKey": "patty_neutral_default",
+      "filename": "patty_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "patty_annoyed_default",
+      "filename": "patty_default_annoyed.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "patty_excited_default",
+      "filename": "patty_default_excited.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "patty_scared_default",
+      "filename": "patty_default_scared.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "brad_neutral_default",
+      "filename": "brad_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "brad_nervous_default",
+      "filename": "brad_default_nervous.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "brad_scared_default",
+      "filename": "brad_default_scared.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "big_al_neutral_default",
+      "filename": "big_al_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "big_al_menacing_default",
+      "filename": "big_al_default_menacing.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "big_al_grinning_default",
+      "filename": "big_al_default_grinning.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "parrot_neutral_default",
+      "filename": "parrot_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "parrot_vulture_default",
+      "filename": "parrot_default_vulture.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "madame_zeno_mysterious_default",
+      "filename": "madame_zeno_default_mysterious.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "madame_zeno_trance_default",
+      "filename": "madame_zeno_default_trance.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "snake_lady_neutral_default",
+      "filename": "snake_lady_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "giant_sad_default",
+      "filename": "giant_default_sad.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "giant_angry_default",
+      "filename": "giant_default_angry.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "giant_crying_default",
+      "filename": "giant_default_crying.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "dr_stone_evil_default",
+      "filename": "dr_stone_default_evil.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "monster_horned_neutral_default",
+      "filename": "monster_horned_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "monster_alligator_neutral_default",
+      "filename": "monster_alligator_default_neutral.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "dummy_lifeless_default",
+      "filename": "dummy_default_lifeless.png",
+      "type": "character"
+    },
+    {
+      "assetKey": "dummy_alive_default",
+      "filename": "dummy_default_alive.png",
+      "type": "character"
+    }
+  ],
+  "failed_assets": [
+    {
+      "assetKey": "patty_monster_default",
+      "reason": "No image data returned from Gemini"
+    },
+    {
+      "assetKey": "dr_stone_robot_default",
+      "reason": "No image data returned from Gemini"
+    },
+    {
+      "assetKey": "dwarf_creepy_smile_default",
+      "reason": "No image data returned from Gemini"
+    },
+    {
+      "assetKey": "ghost_menacing_default",
+      "reason": "No image data returned from Gemini"
+    }
+  ]
+}

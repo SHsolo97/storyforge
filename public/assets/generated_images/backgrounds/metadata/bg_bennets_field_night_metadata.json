@@ -1,0 +1,14 @@
+{
+  "assetKey": "bg_bennets_field_night",
+  "asset": {
+    "type": "background",
+    "assetKey": "bg_bennets_field_night",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling wide shot of a large, grassy field at night. A full moon illuminates the scene with a pale, eerie light. In the distance, a massive, dark wooden fence is silhouetted against the sky. The grass is long and sways ominously. The style is 90s spooky, with high contrast and deep shadows."
+  },
+  "filename": "bg_bennets_field_night.jpg",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\backgrounds\\bg_bennets_field_night.jpg",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling wide shot of a large, grassy field at night. A full moon illuminates the scene with a pale, eerie light. In the distance, a massive, dark wooden fence is silhouetted against the sky. The grass is long and sways ominously. The style is 90s spooky, with high contrast and deep shadows. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: background: bg_suburban_street. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T02:54:51.852Z",
+  "updated_at": "2025-09-16T03:09:20.421Z",
+  "update_reason": "Reorganized backgrounds folder structure - removed indoor/outdoor subfolders"
+}

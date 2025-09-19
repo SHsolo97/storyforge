@@ -1,0 +1,14 @@
+{
+  "assetKey": "bg_dr_stone_lab",
+  "asset": {
+    "type": "background",
+    "assetKey": "bg_dr_stone_lab",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling view of a strange laboratory. A giant, sticky spider-like web is stretched across one area. Strange beakers and equipment are scattered about. Two monstrous figures stand in the background. The style is 90s spooky, combining elements of classic monster movies with a grimy, industrial look."
+  },
+  "filename": "bg_dr_stone_lab.jpg",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\backgrounds\\bg_dr_stone_lab.jpg",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling view of a strange laboratory. A giant, sticky spider-like web is stretched across one area. Strange beakers and equipment are scattered about. Two monstrous figures stand in the background. The style is 90s spooky, combining elements of classic monster movies with a grimy, industrial look. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: background: bg_house_of_horrors_bridge, background: bg_house_of_horrors_interior, background: bg_mirror_room. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T02:57:59.570Z",
+  "updated_at": "2025-09-16T03:09:20.429Z",
+  "update_reason": "Reorganized backgrounds folder structure - removed indoor/outdoor subfolders"
+}

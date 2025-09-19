@@ -1,0 +1,28 @@
+{
+  "assetKey": "patty_excited_default_v2",
+  "asset": {
+    "type": "character",
+    "character_name": "patty",
+    "emotion": "excited",
+    "variant": "default_v2",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, with a wide-eyed, excited expression. She is the bossy friend, with fiery red hair and a face full of freckles. Her mouth is slightly open in a grin of anticipation. She is wearing a simple 90s-style t-shirt. The scene is illuminated by the flashing, colorful lights of a carnival ride, creating a manic atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective."
+  },
+  "filename": "patty_default_excited1.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\patty_default_excited1.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, with a wide-eyed, excited expression. She is the bossy friend, with fiery red hair and a face full of freckles. Her mouth is slightly open in a grin of anticipation. She is wearing a simple 90s-style t-shirt. The scene is illuminated by the flashing, colorful lights of a carnival ride, creating a manic atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective.\n\nMaintain absolute consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.\n\nCRITICAL: Reference the provided images of the same character (Patty) to ensure perfect visual consistency. This excited expression must maintain:\n- EXACTLY the same facial features and bone structure\n- EXACTLY the same fiery red hair color, texture, and ponytail style  \n- EXACTLY the same prominent freckle pattern and placement\n- EXACTLY the same 90s-style t-shirt color and design\n- EXACTLY the same skin tone and overall character design\n\nOnly change the facial expression to show excited emotion. Everything else must be identical to the reference images.",
+  "contextImages": [
+    {
+      "filename": "patty_default_neutral.png",
+      "type": "character",
+      "description": "patty neutral"
+    },
+    {
+      "filename": "patty_default_annoyed1.png",
+      "type": "character",
+      "description": "patty annoyed"
+    }
+  ],
+  "generated_at": "2025-09-16T03:49:30.293Z",
+  "generation_sequence": 2,
+  "regeneration_reason": "Sequential regeneration with cumulative context for consistency"
+}

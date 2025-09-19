@@ -1,0 +1,14 @@
+{
+  "assetKey": "patty_excited_default",
+  "asset": {
+    "type": "character",
+    "character_name": "patty",
+    "emotion": "excited",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, with a wide-eyed, excited expression. She is the bossy friend, with fiery red hair and a face full of freckles. Her mouth is slightly open in a grin of anticipation. She is wearing a simple 90s-style t-shirt. The scene is illuminated by the flashing, colorful lights of a carnival ride, creating a manic atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective."
+  },
+  "filename": "patty_default_excited.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\characters\\patty_default_excited.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, with a wide-eyed, excited expression. She is the bossy friend, with fiery red hair and a face full of freckles. Her mouth is slightly open in a grin of anticipation. She is wearing a simple 90s-style t-shirt. The scene is illuminated by the flashing, colorful lights of a carnival ride, creating a manic atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: character: patty, character: patty. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T03:00:35.569Z"
+}

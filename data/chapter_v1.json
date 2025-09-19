@@ -1,0 +1,1093 @@
+{
+  "assetManifest": {
+    "images": {
+      "bg_school_entrance": "https://assets.heartwoodechoes.com/bgs/ch1/school_entrance_golden_hour.jpg",
+      "bg_school_hallway": "https://assets.heartwoodechoes.com/bgs/ch1/school_hallway_chaotic.jpg",
+      "bg_library_corner": "https://assets.heartwoodechoes.com/bgs/ch1/library_corner_quiet.jpg",
+      "bg_cafeteria": "https://assets.heartwoodechoes.com/bgs/ch1/cafeteria_crowded.jpg",
+      "bg_art_club": "https://assets.heartwoodechoes.com/bgs/ch1/art_club_messy.jpg",
+      "bg_av_room": "https://assets.heartwoodechoes.com/bgs/ch1/av_room_tech.jpg",
+      "bg_soccer_field": "https://assets.heartwoodechoes.com/bgs/ch1/soccer_field_sunset.jpg",
+      "bg_bleachers": "https://assets.heartwoodechoes.com/bgs/ch1/bleachers_sunset.jpg",
+      "prop_echo_note_01": "https://assets.heartwoodechoes.com/props/echo_note_folded.png",
+      "cg_jordan_bleachers": "https://assets.heartwoodechoes.com/cgs/ch1/jordan_vulnerable_sunset.jpg"
+    },
+    "characters": {
+      "alex": {
+        "base": {
+          "neutral": "https://assets.heartwoodechoes.com/chars/alex/base/neutral.png",
+          "nervous": "https://assets.heartwoodechoes.com/chars/alex/base/nervous.png",
+          "hopeful": "https://assets.heartwoodechoes.com/chars/alex/base/hopeful.png"
+        }
+      },
+      "jordan": {
+        "uniform": {
+          "neutral": "https://assets.heartwoodechoes.com/chars/jordan/uniform/neutral.png",
+          "groan": "https://assets.heartwoodechoes.com/chars/jordan/uniform/groan.png",
+          "grateful": "https://assets.heartwoodechoes.com/chars/jordan/uniform/grateful.png",
+          "vulnerable": "https://assets.heartwoodechoes.com/chars/jordan/uniform/vulnerable.png"
+        }
+      },
+      "maya": {
+        "uniform": {
+          "friendly": "https://assets.heartwoodechoes.com/chars/maya/uniform/friendly.png",
+          "neutral": "https://assets.heartwoodechoes.com/chars/maya/uniform/neutral.png"
+        }
+      },
+      "leo": {
+        "casual": {
+          "neutral": "https://assets.heartwoodechoes.com/chars/leo/casual/neutral.png"
+        }
+      },
+      "sam": {
+        "art": {
+          "laughing": "https://assets.heartwoodechoes.com/chars/sam/art/laughing.png",
+          "neutral": "https://assets.heartwoodechoes.com/chars/sam/art/neutral.png"
+        }
+      }
+    },
+    "audio": {
+      "music_evergreen_dream": "https://assets.heartwoodechoes.com/music/evergreen_dream_indie_pop.mp3",
+      "sfx_bell_ring": "https://assets.heartwoodechoes.com/sfx/school_bell_ring.wav",
+      "sfx_hallway_chatter": "https://assets.heartwoodechoes.com/sfx/hallway_chatter_ambient.mp3",
+      "sfx_mystery_sting_01": "https://assets.heartwoodechoes.com/sfx/mystery_piano_sting_01.wav"
+    }
+  },
+  "characterCustomization": {
+    "characterKey": "alex",
+    "categories": [
+      {
+        "id": "hairstyle",
+        "name": "Hairstyle",
+        "options": [
+          {
+            "id": "short_wavy",
+            "name": "Wavy Bob",
+            "thumbnail": "https://assets.heartwoodechoes.com/customization/hair/short_wavy_thumb.png"
+          },
+          {
+            "id": "long_straight",
+            "name": "Long & Straight",
+            "thumbnail": "https://assets.heartwoodechoes.com/customization/hair/long_straight_thumb.png"
+          },
+          {
+            "id": "braids",
+            "name": "Box Braids",
+            "thumbnail": "https://assets.heartwoodechoes.com/customization/hair/braids_thumb.png"
+          }
+        ]
+      },
+      {
+        "id": "outfit",
+        "name": "First Day Outfit",
+        "options": [
+          {
+            "id": "hoodie",
+            "name": "Cozy Hoodie",
+            "thumbnail": "https://assets.heartwoodechoes.com/customization/outfit/hoodie_thumb.png"
+          },
+          {
+            "id": "preppy",
+            "name": "Preppy Sweater",
+            "thumbnail": "https://assets.heartwoodechoes.com/customization/outfit/preppy_thumb.png"
+          },
+          {
+            "id": "artsy",
+            "name": "Artsy Layers",
+            "thumbnail": "https://assets.heartwoodechoes.com/customization/outfit/artsy_thumb.png"
+          }
+        ]
+      }
+    ]
+  },
+  "startNodeId": "ch1_start",
+  "nodes": {
+    "ch1_start": {
+      "onEnter": [
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_school_hallway",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "music",
+          "args": {
+            "srcKey": "music_evergreen_dream",
+            "action": "play",
+            "loop": true
+          }
+        },
+        {
+          "op": "sfx",
+          "args": {
+            "srcKey": "sfx_bell_ring"
+          }
+        },
+        {
+          "op": "sfx",
+          "args": {
+            "srcKey": "sfx_hallway_chatter"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "alex",
+            "action": "show",
+            "position": "center",
+            "emotion": "nervous"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "The bell shrieks, a sound that's both universal and completely alien. My first day at Evergreen High, and I'm already late."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "Faces blur past, a river of strangers. My schedule is a crumpled, sweaty mess in my hand. Room 204... where is Room 204?"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c1",
+          "text": "What's my first instinct?",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_personality_choice"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_personality_choice": {
+      "choices": [
+        {
+          "id": "ch1_c2a",
+          "text": "Brave the chaos and ask someone for help.",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Confidence",
+                "value": 5
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_maya_path"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c2b",
+          "text": "Retreat to a quiet corner and study the school map.",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Empathy",
+                "value": 5
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_leo_path"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c2c",
+          "text": "Just start walking. It's an adventure, right?",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Creativity",
+                "value": 5
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_sam_path"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_maya_path": {
+      "onEnter": [
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "alex",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "maya",
+            "action": "show",
+            "position": "center",
+            "emotion": "friendly"
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Maya",
+            "text": "Lost? It happens! Room 204 is just down this hall, second door on the left. I'm Maya, by the way. Welcome to Evergreen!"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "She gives me a smile so perfect and reassuring, it could probably calm a hurricane."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c3a",
+          "text": "Thanks, Maya.",
+          "effects": [
+            {
+              "op": "character",
+              "args": {
+                "characterKey": "maya",
+                "action": "hide"
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_cafeteria"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_leo_path": {
+      "onEnter": [
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_library_corner",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "alex",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "I find a school map near the library entrance. As I'm looking at it, I notice a boy sitting nearby, completely absorbed in a book, headphones around his neck."
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "leo",
+            "action": "show",
+            "position": "center",
+            "emotion": "neutral"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "He seems to exist in his own quiet, peaceful bubble. After a moment, I find Room 204 on the map and head off."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c3b",
+          "text": "Time for class.",
+          "effects": [
+            {
+              "op": "character",
+              "args": {
+                "characterKey": "leo",
+                "action": "hide"
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_cafeteria"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_sam_path": {
+      "onEnter": [
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "alex",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "I turn a random corner and nearly walk straight into a girl with a streak of blue paint on her cheek."
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "sam",
+            "action": "show",
+            "position": "center",
+            "emotion": "laughing"
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Sam",
+            "text": "Whoa there! Watch out, I'm a walking biohazard of artistic expression. You look new! Name's Sam. What's your destination, adventurer?"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "Her energy is infectious. After she points me in the right direction, I feel a little less like a ghost in these halls."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c3c",
+          "text": "Follow her directions.",
+          "effects": [
+            {
+              "op": "character",
+              "args": {
+                "characterKey": "sam",
+                "action": "hide"
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_cafeteria"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_cafeteria": {
+      "onEnter": [
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_cafeteria",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "Somehow, I survive the morning. But now comes the true test: the cafeteria at lunchtime."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "I stand with my tray, scanning a sea of tables. Every laugh, every inside joke, makes me feel like I'm on the outside of a giant, warm bubble."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c4_premium",
+          "text": "[30💎] Buy the 'Evergreen Explorer' pass.",
+          "cost": 30,
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_premium_tour"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c4_decline",
+          "text": "Find an empty table.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_decline_tour"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_decline_tour": {
+      "onEnter": [
+        {
+          "op": "narration",
+          "args": {
+            "text": "I find an empty table in the corner and focus on my lunch. The feeling of being an outsider settles in, heavy and uncomfortable. It is what it is."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "As I eat, a student passing by gives me a small, kind smile. It doesn't fix everything, but it's a start."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c5",
+          "text": "Finish lunch.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_find_notebook"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_premium_tour": {
+      "onEnter": [
+        {
+          "op": "inc",
+          "args": {
+            "var": "Relationship_Jordan",
+            "value": 10
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Relationship_Maya",
+            "value": 10
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Relationship_Sam",
+            "value": 10
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Relationship_Leo",
+            "value": 10
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Confidence",
+            "value": 5
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Empathy",
+            "value": 5
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Creativity",
+            "value": 5
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "maya",
+            "action": "show",
+            "position": "center",
+            "emotion": "friendly"
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Maya",
+            "text": "An 'Evergreen Explorer' pass! Smart choice. Come on, I'll give you the whirlwind tour."
+          }
+        },
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_soccer_field",
+            "transition": "dissolve"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "maya",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "show",
+            "position": "center",
+            "emotion": "neutral"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "Maya leads me out to the soccer field, where a boy with an easy smile effortlessly directs a practice drill. That's Jordan, the team captain."
+          }
+        },
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_art_club",
+            "transition": "dissolve"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "sam",
+            "action": "show",
+            "position": "center",
+            "emotion": "neutral"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "Next, the art room, a beautiful mess of color and clay. The girl with paint on her cheek, Sam, is passionately debating the merits of cerulean blue."
+          }
+        },
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_av_room",
+            "transition": "dissolve"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "sam",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "leo",
+            "action": "show",
+            "position": "center",
+            "emotion": "neutral"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "Finally, she shows me the AV club, where the quiet boy from the library, Leo, is expertly untangling a nightmare of cables. He's the silent force that makes everything run."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c5_premium",
+          "text": "This school is full of interesting people.",
+          "effects": [
+            {
+              "op": "character",
+              "args": {
+                "characterKey": "leo",
+                "action": "hide"
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_find_notebook"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_find_notebook": {
+      "onEnter": [
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_cafeteria",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "As lunch ends and students start to clear out, I spot a forgotten notebook on a nearby table. I pick it up, meaning to turn it in to the lost and found."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "A small, neatly folded note falls out from between the pages."
+          }
+        },
+        {
+          "op": "showCG",
+          "args": {
+            "imageKey": "prop_echo_note_01"
+          }
+        },
+        {
+          "op": "sfx",
+          "args": {
+            "srcKey": "sfx_mystery_sting_01"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "'To the boy in the green hoodie. I saw you stay late to help the janitor clean up that spill. No one else noticed, but I did. The world needs more people like you.' It's signed '-The Echo.'"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c6a",
+          "text": "Try to find the boy and give it to him.",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Empathy",
+                "value": 10
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_pe_class"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c6b",
+          "text": "Turn the notebook and note in to lost and found.",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Confidence",
+                "value": 5
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_pe_class"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c6c",
+          "text": "Keep the note. This is too interesting.",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Creativity",
+                "value": 5
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_pe_class"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_pe_class": {
+      "onEnter": [
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_soccer_field",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "My last class of the day is PE. The coach announces a surprise fitness test. Wonderful. I'm paired with Jordan, the soccer captain."
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "show",
+            "position": "center",
+            "emotion": "groan"
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Jordan",
+            "text": "A pop quiz on push-ups? Seriously? My arms are shot from practice this morning."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "During the sit-up portion, he's clearly struggling to finish his reps."
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Jordan",
+            "text": "(He whispers) Can you... hold my feet down a little less?"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c7_timed",
+          "text": "Help him or not?",
+          "effects": [
+            {
+              "op": "choiceTimed",
+              "args": {
+                "duration": 8,
+                "defaultChoiceId": "ch1_c7_fail",
+                "timerVisible": true
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_pe_timed_choice"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_pe_timed_choice": {
+      "choices": [
+        {
+          "id": "ch1_c7_success",
+          "text": "Ease up and let him cheat.",
+          "effects": [
+            {
+              "op": "inc",
+              "args": {
+                "var": "Relationship_Jordan",
+                "value": 10
+              }
+            },
+            {
+              "op": "inc",
+              "args": {
+                "var": "Empathy",
+                "value": 5
+              }
+            },
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_timed_success"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c7_fail",
+          "text": "Hesitate.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_timed_fail"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_timed_success": {
+      "onEnter": [
+        {
+          "op": "narration",
+          "args": {
+            "text": "I subtly ease up on his ankles, just enough for him to power through the last few reps before the coach looks over."
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "update",
+            "emotion": "grateful"
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Jordan",
+            "text": "Thanks. You're a lifesaver."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "He shoots me a grateful, conspiratorial grin."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c8a",
+          "text": "No problem.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_pe_premium_choice"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_timed_fail": {
+      "onEnter": [
+        {
+          "op": "narration",
+          "args": {
+            "text": "I hesitate for a second too long. The coach walks past, and the moment is lost. Jordan just sighs and struggles through the last rep on his own."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c8b",
+          "text": "Tough break.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_pe_premium_choice"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_pe_premium_choice": {
+      "onEnter": [
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "update",
+            "emotion": "neutral"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "After class, he's sitting on the bleachers, looking stressed as he rubs his shoulder."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c9_premium",
+          "text": "[25💎] Offer to help him stretch.",
+          "cost": 25,
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_premium_stretch_accept"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch1_c9_decline",
+          "text": "Leave him to it.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_cliffhanger"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_premium_stretch_accept": {
+      "onEnter": [
+        {
+          "op": "inc",
+          "args": {
+            "var": "Relationship_Jordan",
+            "value": 20
+          }
+        },
+        {
+          "op": "inc",
+          "args": {
+            "var": "Empathy",
+            "value": 10
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "showCG",
+          "args": {
+            "imageKey": "cg_jordan_bleachers",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "I show him a few simple stretches. As we sit on the bleachers, the setting sun casting a warm golden light, the 'jock' mask slips."
+          }
+        },
+        {
+          "op": "dialogue",
+          "args": {
+            "character": "Jordan",
+            "text": "It's just... this scholarship, my parents... there's a lot of pressure to be the perfect son, the perfect captain. It gets heavy sometimes."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "For the first time, I see past the popular athlete to the vulnerable person underneath. And in his eyes, I see genuine, unguarded gratitude."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "ch1_c10",
+          "text": "I get it.",
+          "effects": [
+            {
+              "op": "goto",
+              "args": {
+                "target": "ch1_cliffhanger"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "ch1_cliffhanger": {
+      "onEnter": [
+        {
+          "op": "bg",
+          "args": {
+            "imageKey": "bg_school_hallway",
+            "transition": "fade"
+          }
+        },
+        {
+          "op": "character",
+          "args": {
+            "characterKey": "jordan",
+            "action": "hide"
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "As I'm leaving the school, exhausted but thoughtful, I see a flash of movement down the hall."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "A student I don't recognize quickly tucks an identical folded note into a locker before hurrying away."
+          }
+        },
+        {
+          "op": "narration",
+          "args": {
+            "text": "The Echo isn't just one note. It's a secret, active society of kindness."
+          }
+        },
+        {
+          "op": "endChapter",
+          "args": {}
+        }
+      ]
+    }
+  }
+}

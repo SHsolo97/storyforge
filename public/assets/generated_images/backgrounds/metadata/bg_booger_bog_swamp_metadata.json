@@ -1,0 +1,14 @@
+{
+  "assetKey": "bg_booger_bog_swamp",
+  "asset": {
+    "type": "background",
+    "assetKey": "bg_booger_bog_swamp",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling view of a dark, eerie swamp at night. Twisted, gnarled trees rise from the murky water, their branches like bony fingers. A thick mist hangs in the air, glowing with a faint, sickly green light. The style is 90s spooky, with a menacing, supernatural atmosphere."
+  },
+  "filename": "bg_booger_bog_swamp.jpg",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\backgrounds\\bg_booger_bog_swamp.jpg",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling view of a dark, eerie swamp at night. Twisted, gnarled trees rise from the murky water, their branches like bony fingers. A thick mist hangs in the air, glowing with a faint, sickly green light. The style is 90s spooky, with a menacing, supernatural atmosphere. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: background: bg_house_of_horrors_interior, background: bg_mirror_room, background: bg_dr_stone_lab. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T02:58:09.646Z",
+  "updated_at": "2025-09-16T03:09:20.426Z",
+  "update_reason": "Reorganized backgrounds folder structure - removed indoor/outdoor subfolders"
+}

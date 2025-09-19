@@ -1,0 +1,31 @@
+{
+  "assetKey": "brad_nervous_default",
+  "asset": {
+    "type": "character",
+    "character_name": "brad",
+    "emotion": "nervous",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Brad, looking very nervous. He is the wimpy friend, with neatly combed brown hair. He's biting his lower lip, and his shoulders are slightly hunched. He is wearing a 90s-style striped polo shirt. The scene is illuminated by dim, uncertain lighting, creating an anxious atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective."
+  },
+  "filename": "brad_default_nervous.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\brad_default_nervous.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Brad, looking very nervous. He is the wimpy friend, with neatly combed brown hair. He's biting his lower lip, and his shoulders are slightly hunched. He is wearing a 90s-style striped polo shirt. The scene is illuminated by dim, uncertain lighting, creating an anxious atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "contextImages": [
+    {
+      "filename": "patty_default_scared.png",
+      "type": "character",
+      "description": "patty"
+    },
+    {
+      "filename": "brad_default_neutral.png",
+      "type": "character",
+      "description": "brad"
+    },
+    {
+      "filename": "brad_default_nervous.png",
+      "type": "character",
+      "description": "brad"
+    }
+  ],
+  "generated_at": "2025-09-16T03:26:28.724Z"
+}

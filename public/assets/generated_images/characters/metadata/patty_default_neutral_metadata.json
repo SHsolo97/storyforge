@@ -1,0 +1,14 @@
+{
+  "assetKey": "patty_neutral_default",
+  "asset": {
+    "type": "character",
+    "character_name": "patty",
+    "emotion": "neutral",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, a pre-teen girl with a determined expression. She is the bossy friend, with fiery red hair tied in a ponytail and a face full of prominent freckles. She is wearing a simple 90s-style t-shirt and denim shorts. The scene is illuminated by the ambient glow of a carnival at night, creating a suspenseful atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective."
+  },
+  "filename": "patty_default_neutral.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\characters\\patty_default_neutral.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, a pre-teen girl with a determined expression. She is the bossy friend, with fiery red hair tied in a ponytail and a face full of prominent freckles. She is wearing a simple 90s-style t-shirt and denim shorts. The scene is illuminated by the ambient glow of a carnival at night, creating a suspenseful atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T03:00:15.078Z"
+}

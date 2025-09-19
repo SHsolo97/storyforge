@@ -1,0 +1,31 @@
+{
+  "assetKey": "brad_scared_default",
+  "asset": {
+    "type": "character",
+    "character_name": "brad",
+    "emotion": "scared",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Brad, with a completely terrified expression. He is the wimpy friend, with his brown hair slightly disheveled from fear. His eyes are wide as saucers, and his mouth is open in a silent scream. He is wearing a 90s-style striped polo shirt. The scene is illuminated by a harsh, stark light source, creating a nightmarish atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective."
+  },
+  "filename": "brad_default_scared.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\brad_default_scared.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Brad, with a completely terrified expression. He is the wimpy friend, with his brown hair slightly disheveled from fear. His eyes are wide as saucers, and his mouth is open in a silent scream. He is wearing a 90s-style striped polo shirt. The scene is illuminated by a harsh, stark light source, creating a nightmarish atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "contextImages": [
+    {
+      "filename": "brad_default_neutral.png",
+      "type": "character",
+      "description": "brad"
+    },
+    {
+      "filename": "brad_default_nervous.png",
+      "type": "character",
+      "description": "brad"
+    },
+    {
+      "filename": "brad_default_scared.png",
+      "type": "character",
+      "description": "brad"
+    }
+  ],
+  "generated_at": "2025-09-16T03:26:44.133Z"
+}

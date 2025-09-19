@@ -1,0 +1,14 @@
+{
+  "assetKey": "bg_freak_show_alley",
+  "asset": {
+    "type": "background",
+    "assetKey": "bg_freak_show_alley",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling shot of a narrow, dark alley littered with overflowing trash cans and cardboard boxes. The ground is wet and slick, smelling of decay. The walls are grimy brick. The style is 90s spooky, with oppressive shadows and a feeling of being cornered."
+  },
+  "filename": "bg_freak_show_alley.jpg",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\backgrounds\\bg_freak_show_alley.jpg",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling shot of a narrow, dark alley littered with overflowing trash cans and cardboard boxes. The ground is wet and slick, smelling of decay. The walls are grimy brick. The style is 90s spooky, with oppressive shadows and a feeling of being cornered. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: background: bg_prize_room, background: bg_mars_weight_game, background: bg_planet_chamber. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T02:56:30.686Z",
+  "updated_at": "2025-09-16T03:09:20.433Z",
+  "update_reason": "Reorganized backgrounds folder structure - removed indoor/outdoor subfolders"
+}

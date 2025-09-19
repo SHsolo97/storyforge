@@ -1,0 +1,14 @@
+{
+  "assetKey": "bg_hall_of_mountain_king_interior",
+  "asset": {
+    "type": "background",
+    "assetKey": "bg_hall_of_mountain_king_interior",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling view inside a fantasy-themed ride. What was once a cheerful painted backdrop has become a terrifyingly real landscape of black, jagged mountains under a dark sky. A sinister stone castle looms on a hill. The style is 90s spooky, representing a twisted, nightmarish version of a fairy tale."
+  },
+  "filename": "bg_hall_of_mountain_king_interior.jpg",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\backgrounds\\bg_hall_of_mountain_king_interior.jpg",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling view inside a fantasy-themed ride. What was once a cheerful painted backdrop has become a terrifyingly real landscape of black, jagged mountains under a dark sky. A sinister stone castle looms on a hill. The style is 90s spooky, representing a twisted, nightmarish version of a fairy tale. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: background: bg_reptile_zoo, background: bg_pond, background: bg_dummy_tent. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T02:58:52.086Z",
+  "updated_at": "2025-09-16T03:09:20.435Z",
+  "update_reason": "Reorganized backgrounds folder structure - removed indoor/outdoor subfolders"
+}

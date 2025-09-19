@@ -1,0 +1,14 @@
+{
+  "assetKey": "bg_prize_room",
+  "asset": {
+    "type": "background",
+    "assetKey": "bg_prize_room",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling view of a cramped, dusty storeroom. It's filled with bizarre junk: stuffed rats, old catalogs, axes, and portraits of headless people. On a grimy shelf are cans labeled 'CLAY SLIME' and 'MONSTER BLOOD'. The style is 90s spooky, with claustrophobic framing and light filtering through grimy cracks."
+  },
+  "filename": "bg_prize_room.jpg",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\backgrounds\\bg_prize_room.jpg",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling view of a cramped, dusty storeroom. It's filled with bizarre junk: stuffed rats, old catalogs, axes, and portraits of headless people. On a grimy shelf are cans labeled 'CLAY SLIME' and 'MONSTER BLOOD'. The style is 90s spooky, with claustrophobic framing and light filtering through grimy cracks. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: background: bg_carnival_midway_lit, background: bg_haunted_house_exterior, background: bg_wheel_of_no_chance. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T02:55:57.512Z",
+  "updated_at": "2025-09-16T03:09:20.445Z",
+  "update_reason": "Reorganized backgrounds folder structure - removed indoor/outdoor subfolders"
+}

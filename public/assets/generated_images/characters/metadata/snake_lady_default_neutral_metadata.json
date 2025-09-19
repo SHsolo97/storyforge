@@ -1,0 +1,14 @@
+{
+  "assetKey": "snake_lady_neutral_default",
+  "asset": {
+    "type": "character",
+    "character_name": "snake_lady",
+    "emotion": "neutral",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of the Snake Lady. She is a young woman with a beautiful, sad face and long blonde hair, but her body is that of a giant, slithering snake. She is seen from the waist up behind bars. The scene is illuminated by dim, dreary light inside a prison cell, creating a tragic and creepy atmosphere. The overall style emphasizes the contrast between her human face and the hint of scales."
+  },
+  "filename": "snake_lady_default_neutral.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\characters\\snake_lady_default_neutral.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of the Snake Lady. She is a young woman with a beautiful, sad face and long blonde hair, but her body is that of a giant, slithering snake. She is seen from the waist up behind bars. The scene is illuminated by dim, dreary light inside a prison cell, creating a tragic and creepy atmosphere. The overall style emphasizes the contrast between her human face and the hint of scales. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: character: parrot, character: madame_zeno, character: madame_zeno. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T03:02:47.426Z"
+}

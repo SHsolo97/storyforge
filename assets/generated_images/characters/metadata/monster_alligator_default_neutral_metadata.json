@@ -1,0 +1,31 @@
+{
+  "assetKey": "monster_alligator_neutral_default",
+  "asset": {
+    "type": "character",
+    "character_name": "monster_alligator",
+    "emotion": "neutral",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of a seven-foot-tall monster. It has scaly skin and a long alligator snout that snaps open and closed. It also wears a lab coat. The scene is illuminated by strange laboratory lights, creating a horrifying atmosphere. The overall style emphasizes its reptilian texture and menacing jaws."
+  },
+  "filename": "monster_alligator_default_neutral.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\monster_alligator_default_neutral.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of a seven-foot-tall monster. It has scaly skin and a long alligator snout that snaps open and closed. It also wears a lab coat. The scene is illuminated by strange laboratory lights, creating a horrifying atmosphere. The overall style emphasizes its reptilian texture and menacing jaws. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "contextImages": [
+    {
+      "filename": "dr_stone_default_evil.png",
+      "type": "character",
+      "description": "dr_stone"
+    },
+    {
+      "filename": "monster_horned_default_neutral.png",
+      "type": "character",
+      "description": "monster_horned"
+    },
+    {
+      "filename": "monster_alligator_default_neutral.png",
+      "type": "character",
+      "description": "monster_alligator"
+    }
+  ],
+  "generated_at": "2025-09-16T03:31:12.637Z"
+}

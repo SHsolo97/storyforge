@@ -1,0 +1,31 @@
+{
+  "assetKey": "giant_angry_default",
+  "asset": {
+    "type": "character",
+    "character_name": "giant",
+    "emotion": "angry",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Harold, the giant, looking angry. He looms over the viewer, flexing his massive muscles. His face is a thunderous mask of rage, and his eyes are squinting as if ready to squash a bug. The scene is illuminated by harsh, dramatic light, creating a terrifying atmosphere. The overall style emphasizes his raw power and fury."
+  },
+  "filename": "giant_default_angry.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\giant_default_angry.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Harold, the giant, looking angry. He looms over the viewer, flexing his massive muscles. His face is a thunderous mask of rage, and his eyes are squinting as if ready to squash a bug. The scene is illuminated by harsh, dramatic light, creating a terrifying atmosphere. The overall style emphasizes his raw power and fury. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "contextImages": [
+    {
+      "filename": "snake_lady_default_neutral.png",
+      "type": "character",
+      "description": "snake_lady"
+    },
+    {
+      "filename": "giant_default_sad.png",
+      "type": "character",
+      "description": "giant"
+    },
+    {
+      "filename": "giant_default_angry.png",
+      "type": "character",
+      "description": "giant"
+    }
+  ],
+  "generated_at": "2025-09-16T03:29:50.919Z"
+}

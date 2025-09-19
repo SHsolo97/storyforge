@@ -1,0 +1,14 @@
+{
+  "assetKey": "monster_horned_neutral_default",
+  "asset": {
+    "type": "character",
+    "character_name": "monster_horned",
+    "emotion": "neutral",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of a seven-foot-tall monster. It has blue horns, bulging red eyes, and tentacles for arms with giant suckers at the wrists. It wears a lab coat, stretched tightly over its monstrous frame. The scene is illuminated by strange laboratory lights, creating a horrifying atmosphere. The overall style emphasizes its grotesque features and slimy skin texture."
+  },
+  "filename": "monster_horned_default_neutral.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\generated_images\\characters\\monster_horned_default_neutral.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of a seven-foot-tall monster. It has blue horns, bulging red eyes, and tentacles for arms with giant suckers at the wrists. It wears a lab coat, stretched tightly over its monstrous frame. The scene is illuminated by strange laboratory lights, creating a horrifying atmosphere. The overall style emphasizes its grotesque features and slimy skin texture. Maintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Ensure visual consistency with previously generated images in this universe: character: giant, character: giant, character: dr_stone. Use consistent color palette, lighting style, and artistic approach throughout the entire series.",
+  "generated_at": "2025-09-16T03:03:46.168Z"
+}

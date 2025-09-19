@@ -1,0 +1,32 @@
+{
+  "assetKey": "patty_neutral_default",
+  "asset": {
+    "type": "character",
+    "character_name": "patty",
+    "emotion": "neutral",
+    "variant": "default",
+    "prompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, a pre-teen girl with a determined expression. She is the bossy friend, with fiery red hair tied in a ponytail and a face full of prominent freckles. She is wearing a simple 90s-style t-shirt and denim shorts. The scene is illuminated by the ambient glow of a carnival at night, creating a suspenseful atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective."
+  },
+  "filename": "patty_default_neutral.png",
+  "filepath": "D:\\Suhail\\Learning\\Development\\Startup\\assetGen\\img\\images\\characters\\patty_default_neutral.png",
+  "enhancedPrompt": "A cinematic, hyper-detailed, slightly unsettling upper-body character portrait of Patty, a pre-teen girl with a determined expression. She is the bossy friend, with fiery red hair tied in a ponytail and a face full of prominent freckles. She is wearing a simple 90s-style t-shirt and denim shorts. The scene is illuminated by the ambient glow of a carnival at night, creating a suspenseful atmosphere. The overall style emphasizes detailed textures and a slightly distorted, wide-angle perspective. \n\nMaintain consistency with the overall 90s spooky carnival atmosphere with cinematic, hyper-detailed, slightly unsettling style. Use consistent color palette, lighting style, and artistic approach throughout the entire series. \n\nReference the provided images of the same character (Patty) in different emotional states. Ensure this neutral expression maintains the same facial features, hair color and style, clothing, and overall character design as shown in the reference images. Keep her fiery red hair, prominent freckles, and 90s-style t-shirt exactly consistent with the other images.",
+  "contextImages": [
+    {
+      "filename": "patty_default_annoyed.png",
+      "type": "character",
+      "description": "patty"
+    },
+    {
+      "filename": "patty_default_excited.png",
+      "type": "character",
+      "description": "patty"
+    },
+    {
+      "filename": "patty_default_scared.png",
+      "type": "character",
+      "description": "patty"
+    }
+  ],
+  "generated_at": "2025-09-16T03:43:30.922Z",
+  "regeneration_reason": "Failed initial generation - regenerated with Patty visual context"
+}
