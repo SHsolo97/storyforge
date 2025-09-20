@@ -256,6 +256,7 @@ export const ChapterPlayer: React.FC<ChapterPlayerProps> = ({
           getCharacterImage={getCharacterImage}
           getMCCustomization={getMCCustomization}
           speakingCharacter={currentDialogue.character}
+          isDialogueActive={isDialogueVisible}
         />
         
         {/* Dialogue Layer */}
@@ -266,6 +267,7 @@ export const ChapterPlayer: React.FC<ChapterPlayerProps> = ({
           onAdvance={handleDialogueAdvance}
           visible={isDialogueVisible}
           speakingCharacterPosition={speakingCharacterPosition}
+          getCharacterImage={getCharacterImage}
         />
         
         {/* Choice Layer */}

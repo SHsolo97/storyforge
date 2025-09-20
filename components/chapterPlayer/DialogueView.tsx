@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Platform } from 'react-native';
 import Animated, { 
   FadeIn, 
   FadeOut, 
@@ -10,9 +10,11 @@ import Animated, {
   withTiming,
   withSequence,
   withSpring,
+  withDelay,
   Easing
 } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Image } from 'expo-image';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
@@ -22,7 +24,8 @@ interface DialogueViewProps {
   isNarration?: boolean;
   onAdvance?: () => void;
   visible: boolean;
-  speakingCharacterPosition?: 'left' | 'center' | 'right'; // New prop for character position
+  speakingCharacterPosition?: 'left' | 'center' | 'right';
+  getCharacterImage?: (characterKey: string, outfit: string, emotion: string) => string | undefined; // New prop for character images
 }
 
 /**
@@ -34,19 +37,18 @@ export const DialogueView: React.FC<DialogueViewProps> = ({
   isNarration = false, 
   onAdvance,
   visible,
-  speakingCharacterPosition = 'center'
+  speakingCharacterPosition = 'center',
+  getCharacterImage
 }) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
   const [canAdvance, setCanAdvance] = useState(false);
   
-  const blinkOpacity = useSharedValue(1);
   const bubbleScale = useSharedValue(0);
+  const textOpacity = useSharedValue(0);
+  const textTranslateY = useSharedValue(10);
+  const portraitOpacity = useSharedValue(0);
 
   useEffect(() => {
     if (visible && text) {
-      setDisplayedText('');
-      setIsTyping(true);
       setCanAdvance(false);
       
       // Animate bubble appearance
@@ -55,23 +57,37 @@ export const DialogueView: React.FC<DialogueViewProps> = ({
         stiffness: 200,
       });
       
-      // Typewriter effect
-      let currentIndex = 0;
-      const typeInterval = setInterval(() => {
-        currentIndex++;
-        setDisplayedText(text.slice(0, currentIndex));
-        
-        if (currentIndex >= text.length) {
-          clearInterval(typeInterval);
-          setIsTyping(false);
-          setCanAdvance(true);
-          startBlinkAnimation();
-        }
-      }, 10); // Faster typing for better flow
+      // Animate character portrait
+      portraitOpacity.value = withDelay(100, withTiming(1, { 
+        duration: 600, 
+        easing: Easing.out(Easing.cubic) 
+      }));
+      
+      // Animate text with a smooth fade-in and slide-up effect
+      textOpacity.value = 0;
+      textTranslateY.value = 10;
+      
+      // Start text animation after bubble appears
+      textOpacity.value = withDelay(200, withTiming(1, { 
+        duration: 800, 
+        easing: Easing.out(Easing.cubic) 
+      }));
+      
+      textTranslateY.value = withDelay(200, withTiming(0, { 
+        duration: 800, 
+        easing: Easing.out(Easing.cubic) 
+      }));
+      
+      // Enable advance after animation completes
+      setTimeout(() => {
+        setCanAdvance(true);
+      }, 1000);
 
-      return () => clearInterval(typeInterval);
     } else if (!visible) {
       bubbleScale.value = withTiming(0, { duration: 200 });
+      textOpacity.value = 0;
+      textTranslateY.value = 10;
+      portraitOpacity.value = 0;
     }
   }, [visible, text]);
 
@@ -80,69 +96,71 @@ export const DialogueView: React.FC<DialogueViewProps> = ({
     const isMobile = screenWidth < 400;
     
     if (isNarration) {
-      // Position narration above character area to avoid overlap
+      // Position narration centered and higher, no character portrait needed
       return {
         position: 'center',
-        bottom: screenHeight * 0.65, // Higher up to avoid characters
+        bottom: screenHeight * 0.35, // Lower than before for better balance
         left: screenWidth * 0.1,
         right: screenWidth * 0.1,
       };
     }
 
+    // For dialogue, position it in the middle area for better visual connection
     if (isMobile) {
-      // On mobile, position dialogue much higher to avoid character faces
-      // Characters are smaller but still need clearance
       return {
         position: 'center',
-        bottom: screenHeight * 0.45, // Much higher on mobile
+        bottom: screenHeight * 0.3, // Centered vertically for mobile
         left: screenWidth * 0.05,
         right: screenWidth * 0.05,
       };
     }
 
-    // Desktop/tablet positioning
-    switch (speakingCharacterPosition) {
-      case 'left':
-        return {
-          position: 'left',
-          bottom: screenHeight * 0.25,
-          left: 20,
-          maxWidth: screenWidth * 0.7,
-        };
-      case 'right':
-        return {
-          position: 'right',
-          bottom: screenHeight * 0.25,
-          right: 20,
-          maxWidth: screenWidth * 0.7,
-        };
-      case 'center':
-      default:
-        return {
-          position: 'center',
-          bottom: screenHeight * 0.2,
-          left: screenWidth * 0.15,
-          right: screenWidth * 0.15,
-        };
+    // Desktop positioning - closer to center for better integration
+    return {
+      position: 'center',
+      bottom: screenHeight * 0.25, // Centered area
+      left: screenWidth * 0.1,
+      right: screenWidth * 0.1,
+    };
+  };
+
+  // Get character portrait image
+  const getCharacterPortraitImage = () => {
+    if (isNarration || !character || !getCharacterImage) return null;
+    
+    // Try to get the character image - default to "neutral" emotion if not specified
+    const imageUrl = getCharacterImage(character.toLowerCase(), 'default', 'neutral');
+    return imageUrl;
+  };
+
+  // Utility function for image source (same as CharacterView)
+  const getImageSource = (imageUrl: string | number | undefined) => {
+    if (!imageUrl) return undefined;
+    
+    // For mobile platforms, if imageUrl is a number (require result), use it directly
+    if (Platform.OS !== 'web' && typeof imageUrl === 'number') {
+      return imageUrl;
     }
+    
+    // For web or string URLs, use uri format
+    if (typeof imageUrl === 'string') {
+      return { uri: imageUrl };
+    }
+    
+    return undefined;
   };
 
   const startBlinkAnimation = () => {
-    blinkOpacity.value = withSequence(
-      withTiming(0.3, { duration: 800 }),
-      withTiming(1, { duration: 800 })
-    );
-    
-    // Restart the animation after completion
-    setTimeout(() => {
-      if (canAdvance) {
-        startBlinkAnimation();
-      }
-    }, 1600);
+    // No longer needed - animation removed
   };
 
-  const blinkStyle = useAnimatedStyle(() => ({
-    opacity: blinkOpacity.value,
+  const textStyle = useAnimatedStyle(() => ({
+    opacity: textOpacity.value,
+    transform: [{ translateY: textTranslateY.value }],
+  }));
+
+  const portraitStyle = useAnimatedStyle(() => ({
+    opacity: portraitOpacity.value,
   }));
 
   const bubbleStyle = useAnimatedStyle(() => ({
@@ -152,12 +170,6 @@ export const DialogueView: React.FC<DialogueViewProps> = ({
   const handleAdvance = () => {
     if (canAdvance && onAdvance) {
       onAdvance();
-    } else if (isTyping && text) {
-      // Skip typing animation
-      setDisplayedText(text);
-      setIsTyping(false);
-      setCanAdvance(true);
-      startBlinkAnimation();
     }
   };
 
@@ -166,6 +178,7 @@ export const DialogueView: React.FC<DialogueViewProps> = ({
   }
 
   const dialoguePosition = getDialoguePosition();
+  const characterPortraitImage = getCharacterPortraitImage();
 
   return (
     <TouchableOpacity 
@@ -175,55 +188,57 @@ export const DialogueView: React.FC<DialogueViewProps> = ({
     >
       <Animated.View 
         style={[
-          styles.speechBubble,
+          styles.dialogueContainer,
           {
             bottom: dialoguePosition.bottom,
             left: dialoguePosition.left,
             right: dialoguePosition.right,
-            maxWidth: dialoguePosition.maxWidth,
           },
-          isNarration && styles.narrationBubble,
-          speakingCharacterPosition === 'left' && styles.leftBubble,
-          speakingCharacterPosition === 'right' && styles.rightBubble,
           bubbleStyle
         ]}
       >
-        {/* Speech bubble tail */}
-        {!isNarration && (
-          <View style={[
-            styles.speechTail,
-            speakingCharacterPosition === 'left' && styles.leftTail,
-            speakingCharacterPosition === 'right' && styles.rightTail,
-            speakingCharacterPosition === 'center' && styles.centerTail,
-          ]} />
+        {/* Character Portrait for Dialogue (not narration) */}
+        {!isNarration && characterPortraitImage && (
+          <Animated.View style={[styles.characterPortraitContainer, portraitStyle]}>
+            <Image 
+              source={getImageSource(characterPortraitImage)} 
+              style={styles.characterPortrait}
+              contentFit="cover"
+            />
+          </Animated.View>
         )}
-        
-        {/* Bubble content */}
-        <View style={styles.bubbleContent}>
-          {!isNarration && character && (
-            <Animated.Text 
-              style={styles.characterName}
-              entering={FadeIn.delay(200)}
-            >
-              {character}
-            </Animated.Text>
-          )}
-          
-          <Animated.Text 
-            style={[
-              styles.dialogueText, 
-              isNarration && styles.narrationText
-            ]}
-            entering={FadeIn.delay(300)}
-          >
-            {displayedText}
-            {canAdvance && (
-              <Animated.Text style={[styles.advanceIndicator, blinkStyle]}>
-                {' '}▼
+
+        {/* Speech Bubble */}
+        <Animated.View 
+          style={[
+            styles.speechBubble,
+            isNarration && styles.narrationBubble,
+            !isNarration && styles.dialogueBubble,
+          ]}
+        >
+          {/* Bubble content */}
+          <View style={styles.bubbleContent}>
+            {!isNarration && character && (
+              <Animated.Text 
+                style={styles.characterName}
+                entering={FadeIn.delay(200)}
+              >
+                {character}
               </Animated.Text>
             )}
-          </Animated.Text>
-        </View>
+            
+            <Animated.Text 
+              style={[
+                styles.dialogueText, 
+                isNarration && styles.narrationText,
+                textStyle
+              ]}
+              entering={FadeIn.delay(300)}
+            >
+              {text}
+            </Animated.Text>
+          </View>
+        </Animated.View>
       </Animated.View>
     </TouchableOpacity>
   );
@@ -246,13 +261,39 @@ const styles = StyleSheet.create({
     bottom: 0,
     pointerEvents: 'auto', // Make the entire screen tappable
   },
-  speechBubble: {
+  dialogueContainer: {
     position: 'absolute',
+    flexDirection: 'column',
+    alignItems: 'flex-start', // Align items to the left
+    maxWidth: '90%',
+    width: '90%', // Ensure container takes full available width
+  },
+  characterPortraitContainer: {
+    position: 'absolute', // Position absolutely within the dialogue container
+    top: screenWidth < 400 ? -20 : -30, // Position slightly above the speech bubble
+    left: screenWidth < 400 ? 10 : 15, // Small left offset for natural positioning
+    zIndex: 2, // Ensure character is above the speech bubble
+  },
+  characterPortrait: {
+    width: screenWidth < 400 ? 80 : 100, // Much smaller, more like an avatar
+    height: screenWidth < 400 ? 80 : 100, // Square aspect ratio for avatar
+    borderRadius: screenWidth < 400 ? 40 : 50, // Circular avatar
+    backgroundColor: 'rgba(255, 255, 255, 0.1)', // Subtle background
+    borderWidth: 3,
+    borderColor: 'rgba(255, 255, 255, 0.8)', // White border for definition
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+    overflow: 'hidden', // Ensure clipping
+  },
+  speechBubble: {
     backgroundColor: 'rgba(0, 0, 0, 0.85)',
     borderRadius: 20,
-    paddingHorizontal: screenWidth < 400 ? 16 : 20, // Smaller padding on mobile
-    paddingVertical: screenWidth < 400 ? 12 : 16, // Smaller padding on mobile
-    minHeight: screenWidth < 400 ? 50 : 60, // Smaller minimum height on mobile
+    paddingHorizontal: screenWidth < 400 ? 16 : 20,
+    paddingVertical: screenWidth < 400 ? 12 : 16,
+    minHeight: screenWidth < 400 ? 50 : 60,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
@@ -260,17 +301,31 @@ const styles = StyleSheet.create({
     elevation: 8,
     borderWidth: 2,
     borderColor: 'rgba(255, 255, 255, 0.1)',
+    flex: 1,
+    marginTop: 0, // No margin since character overlaps
+    alignSelf: 'stretch', // Stretch to full width
+    zIndex: 1, // Below the character image
+  },
+  dialogueBubble: {
+    backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    borderRadius: 20, // Consistent rounded corners
+    paddingTop: screenWidth < 400 ? 20 : 25, // Just enough padding for the small avatar
+    paddingLeft: screenWidth < 400 ? 100 : 125, // Left padding to accommodate circular avatar
+    paddingRight: screenWidth < 400 ? 20 : 25,
+    paddingBottom: screenWidth < 400 ? 16 : 20,
+    marginTop: 0,
+    minHeight: screenWidth < 400 ? 80 : 100, // Minimum height to match avatar
+  },
+  narrationBubble: {
+    backgroundColor: 'rgba(40, 40, 60, 0.9)',
+    borderColor: 'rgba(150, 150, 200, 0.3)',
+    alignSelf: 'center',
   },
   leftBubble: {
     borderTopLeftRadius: 8, // Less rounded on the character side
   },
   rightBubble: {
     borderTopRightRadius: 8, // Less rounded on the character side
-  },
-  narrationBubble: {
-    backgroundColor: 'rgba(40, 40, 60, 0.9)',
-    borderColor: 'rgba(150, 150, 200, 0.3)',
-    alignSelf: 'center',
   },
   speechTail: {
     position: 'absolute',
@@ -318,7 +373,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   characterName: {
-    fontSize: screenWidth < 400 ? 14 : 16, // Smaller font on mobile
+    fontSize: screenWidth < 400 ? 14 : 16,
     fontWeight: 'bold',
     color: '#FFFFFF',
     marginBottom: 6,
@@ -328,9 +383,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_600SemiBold',
   },
   dialogueText: {
-    fontSize: screenWidth < 400 ? 13 : 15, // Smaller font on mobile
+    fontSize: screenWidth < 400 ? 13 : 15,
     color: '#FFFFFF',
-    lineHeight: screenWidth < 400 ? 18 : 22, // Adjusted line height for mobile
+    lineHeight: screenWidth < 400 ? 18 : 22,
     textShadowColor: 'rgba(0,0,0,0.6)',
     textShadowOffset: { width: 0.5, height: 0.5 },
     textShadowRadius: 1,
@@ -341,10 +396,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#E8E8FF',
     fontSize: 14,
-  },
-  advanceIndicator: {
-    fontSize: 11,
-    color: '#CCCCCC',
-    fontWeight: 'bold',
   },
 });
